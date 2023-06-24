@@ -1,5 +1,11 @@
-.meida {
+.media {
+  padding-top: 10dvh;
   height: 100dvh;
   display: flex;
   flex-direction: row;
+  scroll-snap-align: start;
+}
+.media-video {
+  width: 40vw;
+  height: 50vh;
 }

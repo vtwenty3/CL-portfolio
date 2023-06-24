@@ -8,11 +8,11 @@ import TabPanel from "@mui/base/TabPanel";
 import Tabs from "@mui/base/Tabs";
 export default function Landing() {
   return (
-    <div class="landing">
+    <div className="landing">
       <img src={ChrisImg} alt="Chris Lyons" />
 
-      <div class="landing-content">
-        <h2 class="landing-heading">CHIRS LYONS</h2>
+      <div className="landing-content">
+        <h2 className="landing-heading">CHIRS LYONS</h2>
         <Tabs defaultValue={1}>
           <TabsList>
             <Tab value={1}>About</Tab>

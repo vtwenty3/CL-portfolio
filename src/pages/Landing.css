@@ -2,6 +2,7 @@
   height: 82dvh;
   display: flex;
   flex-direction: row;
+  scroll-snap-align: start;
 }
 
 .landing img {

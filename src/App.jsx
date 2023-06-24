@@ -8,14 +8,16 @@ import "./App.css";
 function App() {
   return (
     <>
-      <Landing />
-      <Navbar />
-      <Media />
-      <div class="content">
-        <div id="tuition">Tuition Section Content</div>
-        <div id="media">Media Section Content</div>
-        <div id="events">Events Section Content</div>
-        <div id="contact">Contact Section Content</div>
+      <div className="app">
+        <Landing />
+        <Navbar />
+        <Media />
+        <div className="content">
+          <h1 id="tuition">Tuition Section Content</h1>
+          <h1 id="media">Media Section Content</h1>
+          <h1 id="events">Events Section Content</h1>
+          <h1 id="contact">Contact Section Content</h1>
+        </div>
       </div>
     </>
   );
