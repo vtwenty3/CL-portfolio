@@ -1,0 +1,5 @@
+.meida {
+  height: 100dvh;
+  display: flex;
+  flex-direction: row;
+}

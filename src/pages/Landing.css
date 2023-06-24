@@ -1,0 +1,46 @@
+.landing {
+  height: 82dvh;
+  display: flex;
+  flex-direction: row;
+}
+
+.landing img {
+  background-size: cover;
+}
+
+.landing-heading {
+  align-self: flex-start;
+  margin: 0;
+  padding: 0;
+  padding-top: 12dvh;
+}
+
+.landing-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 0 3rem;
+  color: #000000;
+  gap: 1rem;
+}
+
+.MuiTabsList-root {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.MuiTab-root {
+  background-color: var(--color-navbar);
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 1px;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  border: none;
+}
+
+.Mui-selected {
+  background-color: var(--color-accent);
+}
