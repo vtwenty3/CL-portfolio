@@ -1,55 +1,51 @@
-import React, { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { easeInOut, motion, useScroll, useTransform } from "framer-motion";
 import "./Navbar.css";
 
 const NavbarLink = ({ href, children }) => (
-  <a href={href} className="navbar__link">
+  <a href={href} className="navbar-each-button">
     {children}
   </a>
 );
 
-function getOffsetTop(elem) {
-  const rect = elem.getBoundingClientRect();
-  return rect.top;
-}
+const minHeight = 10; // height when navbar is at the top
+const maxHeight = 20; // initial height
 
-function Navbar() {
-  const minHeight = 12; // height when navbar is at the top
-  const maxHeight = 20; // initial height
-  const [navHeight, setNavHeight] = useState(maxHeight); // start with max height
+function Navbar({ forwardRef }) {
   const navRef = useRef(null); // Reference to navbar
-  const threshold = 10; // start changing navbar size 50px before reaching the top
+  // const { scrollYProgress } = useScroll({ container: forwardRef });
 
-  useEffect(() => {
-    const onScroll = () => {
-      const { top } = navRef.current.getBoundingClientRect();
-      // If the top of the navbar is less than or equal to threshold, set minHeight
-      // Otherwise, set maxHeight
-      setNavHeight(top <= threshold ? minHeight : maxHeight);
-    };
-
-    document.querySelector(".app").addEventListener("scroll", onScroll);
-    return () => {
-      document.querySelector(".app").removeEventListener("scroll", onScroll);
-    };
-  }, [minHeight, maxHeight, threshold]);
+  const { scrollYProgress } = useScroll({
+    target: forwardRef,
+    offset: ["0dvh", "90dvh"],
+  });
+  // Adjust the navHeight transformation to change during the last 20 percent of the scroll
+  const navHeight = useTransform(
+    scrollYProgress,
+    [0.7, 0.8], // change happens between 80% and 100% of scroll
+    [`${maxHeight}dvh`, `${minHeight}dvh`] // values for the corresponding percentages
+  );
 
   return (
-    <motion.div
-      ref={navRef}
-      className="navbar"
-      initial={{ height: `${maxHeight}vh` }}
-      animate={{ height: `${navHeight}vh` }} // animate height based on state
-      transition={{ duration: 0.35, ease: "easeOut" }}
-    >
-      <h1 className="navbar__title">CHRIS LYONS</h1>
-      <div className="navbar__links">
-        <NavbarLink href="#tuition">Tuition</NavbarLink>
-        <NavbarLink href="#media">Media</NavbarLink>
-        <NavbarLink href="#events">Events</NavbarLink>
-        <NavbarLink href="#contact">Contact</NavbarLink>
-      </div>
-    </motion.div>
+    <div className="nav-wrap">
+      <motion.div
+        // ref={navRef}
+        className="navbar"
+        initial={{ height: `${maxHeight}dvh` }}
+        style={{
+          height: navHeight,
+          transition: `height 0.45s 0.35s`, // add delay
+        }} // animate height based on state
+      >
+        <h1 className="navbar-title">Chris Lyons</h1>
+        <div className="navbar-buttons">
+          <NavbarLink href="#tuition">Tuition</NavbarLink>
+          <NavbarLink href="#media">Media</NavbarLink>
+          <NavbarLink href="#events">Events</NavbarLink>
+          <NavbarLink href="#contact">Contact</NavbarLink>
+        </div>
+      </motion.div>
+    </div>
   );
 }
 

@@ -1,16 +1,26 @@
 import React from "react";
+import { BsYoutube, BsVimeo } from "react-icons/bs";
+import { FaYoutube, FaVimeo } from "react-icons/fa";
+import { TiSocialYoutubeCircular, TiSocialVimeoCircular } from "react-icons/ti";
+
 import "./Media.css";
+import NextEvent from "../components/NextEvent";
+
 export default function Media() {
   return (
-    <div>
-      <div className="media">
-        <div>
-          <h2 className="media-heading">PERORMANCE</h2>
-          <p>
+    <div className="media">
+      <div className="media-content">
+        <div className="media-text">
+          <h2 className="media-heading">Performance</h2>
+          <p className="media-paragraph">
             Chris maintains a busy public performance schedule both solo and
             with a number of ensembles. He is regularly engaged as a session
             performer on a number of instruments (piano, guitar, bass etc)
           </p>
+          <div className="media-buttons">
+            <TiSocialYoutubeCircular />
+            <TiSocialVimeoCircular />
+          </div>
         </div>
         <div className="media-video">
           <iframe
@@ -22,6 +32,7 @@ export default function Media() {
           <script src="https://player.vimeo.com/api/player.js"></script>
         </div>
       </div>
+      <NextEvent />
     </div>
   );
 }

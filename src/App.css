@@ -1,9 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair:wght@300;400;500;600;700;800&display=swap");
 
-@font-face {
-  font-family: "monmed";
-  src: local("monmed"), url(./fonts/Montserrat-Medium.ttf) format("woff");
-}
 :root {
   line-height: 1.5;
   font-weight: 400;
@@ -13,26 +9,46 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  --color-background: #f4ebe8;
+  --color-offwhite: #f4ebe8;
   --color-navbar: #060b0c;
   --color-accent: #325a69;
+  --color-hover: #c7bebc;
   --color-text: black;
-  --fs-text: clamp(0.8rem, 0.4vw + 0.75rem, 1.1em);
+  --fs-text: clamp(0.8rem, 0.5vw + 0.5vh + 0.6rem, 1.8em);
+  --fs-heading: clamp(1.1rem, 0.6vw + 1.2rem, 2.1rem);
   --fs-text-mobile: clamp(0.84rem, 0.4vw + 0.7rem, 2rem);
-  --padding: clamp(0.2rem, 1.4vw + 0.4rem, 2.5rem);
   --padding-small: clamp(0.35rem, 0.3vw + 0.12rem, 1.5rem);
+  --padding: clamp(0.2rem, 1.4vw + 0.4rem, 2.5rem);
+  --padding-big: clamp(0.4rem, 2vw + 1.4rem, 3.5rem);
+  --padding-button: calc(var(--padding-small)) calc(var(--padding-small) * 2);
 }
 
 a {
-  color: rgb(255, 255, 255);
+  color: var(--color-text);
 }
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+html {
+  scroll-snap-type: y proximity;
+  scroll-snap-stop: always;
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-snap-align: center;
+}
+
 #root {
   padding: 0;
   max-width: 100%;
 }
 
 body {
-  background-color: var(--color-background);
+  background-color: var(--color-offwhite);
   color: var(--color-text);
   margin: 0;
   padding: 0;
@@ -45,12 +61,4 @@ body {
   gap: 700px;
   padding-bottom: 700px;
   padding-top: 300px;
-}
-
-.app {
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-  scroll-snap-type: y proximity;
-  scroll-padding: 50px;
-  height: 100dvh;
 }
