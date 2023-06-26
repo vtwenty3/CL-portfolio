@@ -19,33 +19,30 @@ function Navbar({ forwardRef }) {
     target: forwardRef,
     offset: ["0dvh", "90dvh"],
   });
-  // Adjust the navHeight transformation to change during the last 20 percent of the scroll
   const navHeight = useTransform(
     scrollYProgress,
-    [0.7, 0.8], // change happens between 80% and 100% of scroll
+    [0.77, 0.78],
     [`${maxHeight}dvh`, `${minHeight}dvh`] // values for the corresponding percentages
   );
 
   return (
-    <div className="nav-wrap">
-      <motion.div
-        // ref={navRef}
-        className="navbar"
-        initial={{ height: `${maxHeight}dvh` }}
-        style={{
-          height: navHeight,
-          transition: `height 0.45s 0.35s`, // add delay
-        }} // animate height based on state
-      >
-        <h1 className="navbar-title">Chris Lyons</h1>
-        <div className="navbar-buttons">
-          <NavbarLink href="#tuition">Tuition</NavbarLink>
-          <NavbarLink href="#media">Media</NavbarLink>
-          <NavbarLink href="#events">Events</NavbarLink>
-          <NavbarLink href="#contact">Contact</NavbarLink>
-        </div>
-      </motion.div>
-    </div>
+    <motion.div
+      // ref={navRef}
+      className="navbar"
+      initial={{ height: `${maxHeight}dvh` }}
+      style={{
+        height: navHeight,
+        transition: `height 0.45s 0.35s`, // add delay
+      }} // animate height based on state
+    >
+      <h1 className="navbar-title">Chris Lyons</h1>
+      <div className="navbar-buttons">
+        <NavbarLink href="#tuition">Tuition</NavbarLink>
+        <NavbarLink href="#media">Media</NavbarLink>
+        <NavbarLink href="#events">Events</NavbarLink>
+        <NavbarLink href="#contact">Contact</NavbarLink>
+      </div>
+    </motion.div>
   );
 }
 

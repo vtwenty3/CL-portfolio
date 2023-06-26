@@ -1,0 +1,17 @@
+.events {
+  height: 90dvh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.events-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90dvh;
+}
+.events-container {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}

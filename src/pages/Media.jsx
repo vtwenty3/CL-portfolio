@@ -4,7 +4,7 @@ import { FaYoutube, FaVimeo } from "react-icons/fa";
 import { TiSocialYoutubeCircular, TiSocialVimeoCircular } from "react-icons/ti";
 
 import "./Media.css";
-import NextEvent from "../components/NextEvent";
+import Event from "../components/Event";
 
 export default function Media() {
   return (
@@ -32,7 +32,11 @@ export default function Media() {
           <script src="https://player.vimeo.com/api/player.js"></script>
         </div>
       </div>
-      <NextEvent />
+      <div className="eventbar">
+        <span className="eventbar-heading"> Next event:</span>
+        <Event />
+        <span className="eventbar-button">All Events</span>
+      </div>
     </div>
   );
 }

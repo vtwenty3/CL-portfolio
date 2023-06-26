@@ -35,6 +35,7 @@ p {
 html {
   scroll-snap-type: y proximity;
   scroll-snap-stop: always;
+  scroll-padding-top: 10dvh;
   scroll-behavior: smooth;
 }
 
