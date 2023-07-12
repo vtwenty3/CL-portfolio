@@ -3,6 +3,7 @@ import "./Arrange.css";
 import ArrangeImg from "./../assets/arrange.png";
 import BBC from "./../assets/bbc.png";
 import CNN from "./../assets/cnn.png";
+import Button from "../components/Button"
 
 export default function Arrange() {
   return (
@@ -20,7 +21,7 @@ export default function Arrange() {
             students of varying ages and experience and is an approachable,
             enthusiastic and friendly teacher.
           </p>
-          <span className="event-button arrange-button">Contact Chris</span>
+          <Button title="Contact Chris" onClick={() => console.log("hibe")} />
         </div>
       </div>
       <div className="arrange-banner">

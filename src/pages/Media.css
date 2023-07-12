@@ -2,13 +2,14 @@
   height: 90dvh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .media-content {
   display: flex;
+  flex: 1;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: flex-start;
+  align-items: center;
   gap: var(--padding-big);
 }
 .media-heading {
@@ -34,7 +35,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--padding-small);
-  height: 100%;
+  align-self: center;
+  
 }
 
 .eventbar-heading {
@@ -43,15 +45,7 @@
   margin: 0;
   text-transform: uppercase;
 }
-.eventbar-button {
-  background-color: var(--color-navbar);
-  color: var(--color-offwhite);
-  padding: 0.5rem 1rem;
-  transition: color 0.3s ease;
-}
-.eventbar-button:hover {
-  color: var(--color-hover);
-}
+
 .eventbar {
   display: flex;
   flex-direction: row;

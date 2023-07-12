@@ -11,7 +11,9 @@ export default function Events() {
         <Event />
         <Event />
       </div>
-      <img src={EventImg} alt="Event" className="events-img" />
+      <div>
+        <img src={EventImg} alt="Event" className="events-img" />
+      </div>
     </div>
   );
 }

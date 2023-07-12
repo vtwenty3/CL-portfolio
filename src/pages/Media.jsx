@@ -5,7 +5,7 @@ import { TiSocialYoutubeCircular, TiSocialVimeoCircular } from "react-icons/ti";
 
 import "./Media.css";
 import Event from "../components/Event";
-
+import Button from "../components/Button"
 export default function Media() {
   return (
     <div className="media">
@@ -35,7 +35,7 @@ export default function Media() {
       <div className="eventbar">
         <span className="eventbar-heading"> Next event:</span>
         <Event />
-        <span className="eventbar-button">All Events</span>
+        <Button title="All Events" onClick={() => console.log("bye")} />
       </div>
     </div>
   );

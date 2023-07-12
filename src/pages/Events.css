@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
 }
 .events-img {
   background-size: cover;
@@ -11,7 +10,9 @@
   height: 90dvh;
 }
 .events-container {
+  flex-grow: 1;
   display: flex;
   gap: 2rem;
   flex-direction: column;
+  align-items: center;
 }
