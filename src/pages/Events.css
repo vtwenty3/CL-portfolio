@@ -1,18 +1,28 @@
 .events {
-  height: 90dvh;
+  height: 90svh;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   align-items: center;
+  overflow: hidden;
 }
-.events-img {
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 90dvh;
+
+.events-heading {
+  font-size: var(--fs-heading);
+  text-align: left;
 }
+
 .events-container {
-  flex-grow: 1;
+  width: 50%;
   display: flex;
   gap: 2rem;
   flex-direction: column;
   align-items: center;
+}
+
+
+@media only screen and (max-width: 750px) {
+
+  .events {
+    flex-direction: column;
+  }
 }

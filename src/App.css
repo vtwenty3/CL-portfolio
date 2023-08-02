@@ -14,18 +14,35 @@
   --color-accent: #325a69;
   --color-hover: #c7bebc;
   --color-text: black;
-  --fs-text: clamp(0.8rem, 0.5vw + 0.5vh + 0.6rem, 1.8em);
+  --fs-text: clamp(0.8rem, 0.5vw + 0.5svh + 0.6rem, 1.8em);
   --fs-heading: clamp(1.1rem, 0.6vw + 1.2rem, 2.1rem);
-  --fs-text-mobile: clamp(0.84rem, 0.4vw + 0.7rem, 2rem);
+  --fs-text-mobile: clamp(0.75rem, 0.4vw + 0.7rem, 2rem);
   --padding-small: clamp(0.35rem, 0.3vw + 0.12rem, 1.5rem);
   --padding: clamp(0.2rem, 1.4vw + 0.4rem, 2.5rem);
   --padding-big: clamp(0.4rem, 2vw + 1.4rem, 3.5rem);
   --padding-button: calc(var(--padding-small)) calc(var(--padding-small) * 2);
 }
 
+
+.global-fill {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
+}
+
+.global-fill img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%
+}
+
+
 a {
   color: var(--color-text);
 }
+
 h1,
 h2,
 p {
@@ -35,12 +52,14 @@ p {
 html {
   scroll-snap-type: y proximity;
   scroll-snap-stop: always;
-  scroll-padding-top: 10dvh;
+  scroll-padding-top: 10svh;
   scroll-behavior: smooth;
 }
 
 section {
   scroll-snap-align: center;
+  overflow: hidden;
+
 }
 
 #root {
@@ -62,4 +81,32 @@ body {
   gap: 700px;
   padding-bottom: 700px;
   padding-top: 300px;
+}
+
+.gutter {
+  height: 1svh;
+  background-color: var(--color-navbar);
+  border: 20px solid var(--color-hover);
+}
+
+.stickyImage {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90svh;
+  position: sticky;
+  top: 10svh;
+}
+
+@media only screen and (max-width: 750px) {
+  html {
+    scroll-snap-type: none;
+    scroll-snap-stop: normal;
+    scroll-padding-top: auto;
+    scroll-behavior: smooth;
+  }
+
+  section {
+    scroll-snap-align: none;
+    overflow: hidden;
+  }
 }

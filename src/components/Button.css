@@ -1,10 +1,13 @@
 .button {
-    background-color: var(--color-navbar);
-    color: var(--color-offwhite);
-    padding: 0.5rem 1rem;
-    transition: color 0.3s ease;
-  }
-  .button:hover {
-    color: var(--color-hover);
-    cursor: pointer;
-  }
+  background-color: var(--color-navbar);
+  color: var(--color-offwhite);
+  padding: 0.6rem 1.5rem;
+  transition: color 0.3s ease;
+  font-size: calc(var(--fs-text));
+  max-width: max-content;
+}
+
+.button:hover {
+  color: var(--color-hover);
+  cursor: pointer;
+}

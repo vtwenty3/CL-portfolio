@@ -10,7 +10,9 @@ export default function Landing({ forwardRef }) {
   return (
     <section>
       <div className="landing" ref={forwardRef}>
-        <img src={ChrisImg} alt="Chris Lyons" />
+        <div class="landing-image-container">
+          <img src={ChrisImg} alt="Chris Lyons" />
+        </div>
 
         <div className="landing-content">
           {/* <h2 className="landing-heading">CHIRS LYONS</h2> */}

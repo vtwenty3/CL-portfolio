@@ -4,15 +4,17 @@
   align-items: center;
   justify-content: center;
   background-color: var(--color-hover);
-  max-width: fit-content;
+  min-width: max-content;
   padding: 0rem 2rem;
 }
+
 .event-info {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 }
+
 .event-time {
   display: flex;
   flex-direction: row;
@@ -20,6 +22,7 @@
   font-size: calc(var(--fs-text) * 1.6);
   gap: var(--padding-small);
 }
+
 .event-location {
   border-top: 1.5px solid var(--color-navbar);
   font-size: calc(var(--fs-text) * 1.4);
@@ -29,6 +32,7 @@
   color: var(--color-accent);
   transition: 0.2s;
 }
+
 .event-arrow {
   font-size: 3rem;
 }

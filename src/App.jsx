@@ -5,6 +5,7 @@ import Media from "./pages/Media";
 import Arrange from "./pages/Arrange";
 import Events from "./pages/Events";
 import Contacts from "./pages/Contacts";
+import ContactForm from "./pages/ContactForm";
 
 import "./App.css";
 
@@ -28,8 +29,11 @@ function App() {
         <section>
           <Events />
         </section>
-        <section>
+        {/* <section>
           <Contacts />
+        </section> */}
+        <section>
+          <ContactForm />
         </section>
       </div>
     </>

@@ -1,11 +1,22 @@
 .landing {
-  height: 80dvh;
+  height: 80svh;
   display: flex;
   flex-direction: row;
 }
 
-.landing img {
-  background-size: cover;
+.landing-image-container {
+  flex-basis: 40%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
+}
+
+.landing-image-container img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%
 }
 
 .landing-heading {
@@ -16,13 +27,15 @@
 }
 
 .landing-content {
-  margin-top: 12dvh;
+  flex-basis: 60%;
+  margin-top: 10vmin;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
   padding: 0 var(--padding-big);
   font-size: var(--fs-text);
+  text-align: justify;
   color: var(--color-text);
   gap: 1rem;
 }
@@ -35,17 +48,49 @@
 }
 
 .MuiTab-root {
+  flex: 1;
   background-color: var(--color-navbar);
-  font-size: calc(var(--fs-text) * 0.9);
-  padding: var(--padding-button);
+  font-size: calc(var(--fs-text));
+  padding: 0.8rem 0px;
   font-family: "Playfair Display", serif;
-  font-weight: 400;
+  color: var(--color-offwhite);
+  font-weight: 600;
   border: none;
 }
 
 .Mui-selected {
   background-color: var(--color-accent);
 }
+
 .filler {
-  height: 10dvh;
+  height: 10svh;
+}
+
+
+@media only screen and (max-width: 750px) {
+  .landing {
+    flex-direction: column;
+    height: 90svh;
+
+  }
+
+  .MuiTab-root {
+
+    font-size: var(--fs-text-mobile);
+
+  }
+
+  .landing-content {
+    margin-top: 3vmin;
+    font-size: var(--fs-text-mobile);
+  }
+
+  .landing-image-container {
+    flex-basis: 33%;
+  }
+
+  .landing-image-container img {
+    margin-top: 20svh;
+    width: 100%;
+  }
 }
