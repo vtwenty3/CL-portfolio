@@ -15,24 +15,23 @@ function App() {
   return (
     <>
       <div className="app">
-        <Landing forwardRef={landingRef} />
+        <section id="home">
+          <Landing forwardRef={landingRef} />
+        </section>
         <div className="nav-wrap">
           <Navbar forwardRef={landingRef} />
         </div>
         <div className="filler"></div>
-        <section>
+        <section id="media">
           <Media />
         </section>
-        <section>
+        <section id="arrange">
           <Arrange />
         </section>
-        <section>
+        <section id="events">
           <Events />
         </section>
-        {/* <section>
-          <Contacts />
-        </section> */}
-        <section>
+        <section id="contact">
           <ContactForm />
         </section>
       </div>
@@ -41,3 +40,6 @@ function App() {
 }
 
 export default App;
+{/* <section>
+          <Contacts />
+        </section> */}

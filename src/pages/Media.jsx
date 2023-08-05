@@ -7,8 +7,17 @@ import "./Media.css";
 import Event from "../components/Event";
 import Button from "../components/Button"
 export default function Media() {
+  const scrollToEvents = () => {
+    const eventsElement = document.getElementById('events');
+    if (eventsElement) {
+      eventsElement.scrollIntoView({
+        behavior: 'smooth', // optional, for smooth scrolling
+        block: 'start'      // optional, scrolls the start of the target into view
+      });
+    }
+  };
   return (
-    <div className="media">
+    <div className="media" >
       <div className="media-content">
         <div className="media-text">
           <h2 className="media-heading global-heading">Performance</h2>
@@ -40,7 +49,7 @@ export default function Media() {
         <span className="eventbar-heading">Next event:</span>
         <Event />
         <div className="eventbar-button">
-          <Button title="All Events" onClick={() => console.log("bye")} />
+          <Button title="All Events" onClick={scrollToEvents} />
         </div>
       </div>
     </div>

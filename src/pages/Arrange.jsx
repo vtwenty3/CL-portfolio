@@ -6,6 +6,15 @@ import CNN from "./../assets/cnn.png";
 import Button from "../components/Button"
 
 export default function Arrange() {
+  const scrollToArrange = () => {
+    const eventsElement = document.getElementById('contact');
+    if (eventsElement) {
+      eventsElement.scrollIntoView({
+        behavior: 'smooth', // optional, for smooth scrolling
+        block: 'start'      // optional, scrolls the start of the target into view
+      });
+    }
+  };
   return (
     <div className="arrange">
       <div class="global-fill">
@@ -22,7 +31,7 @@ export default function Arrange() {
           students of varying ages and experience and is an approachable,
           enthusiastic and friendly teacher.
         </p>
-        <Button title="Contact Chris" onClick={() => console.log("hibe")} />
+        <Button title="Contact Chris" onClick={scrollToArrange} />
       </div>
 
     </div>

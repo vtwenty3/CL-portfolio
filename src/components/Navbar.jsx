@@ -41,9 +41,9 @@ function Navbar({ forwardRef }) {
         transition: `height 0.45s 0.35s`, // add delay
       }} // animate height based on state
     >
-      <h1 className="navbar-title">Chris Lyons</h1>
+      <a className="navbar-title" href="#home">Chris Lyons</a>
       <div className="navbar-buttons">
-        <NavbarLink href="#tuition" >Tuition</NavbarLink>
+        <NavbarLink href="#arrange" >Tuition</NavbarLink>
         <NavbarLink href="#media" >Media</NavbarLink>
         <NavbarLink href="#events">Events</NavbarLink>
         <NavbarLink href="#contact" noSeparator={true}>Contact</NavbarLink>

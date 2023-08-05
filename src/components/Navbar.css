@@ -27,6 +27,8 @@
   font-size: calc(var(--fs-heading));
   font-weight: 500;
   text-transform: uppercase;
+  transition: color 0.3s ease;
+
 }
 
 .navbar-buttons {
@@ -48,7 +50,8 @@
 
 }
 
-.navbar-each-button:hover {
+.navbar-each-button:hover,
+.navbar-title:hover {
   color: var(--color-hover);
 }
 
