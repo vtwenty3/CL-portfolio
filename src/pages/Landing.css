@@ -71,18 +71,18 @@
   .landing {
     flex-direction: column;
     height: 90svh;
-
   }
 
   .MuiTab-root {
-
     font-size: var(--fs-text-mobile);
-
   }
 
   .landing-content {
     margin-top: 3vmin;
     font-size: var(--fs-text-mobile);
+    align-items: center;
+    padding: 0 var(--padding);
+
   }
 
   .landing-image-container {

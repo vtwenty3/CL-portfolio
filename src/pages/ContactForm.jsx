@@ -11,7 +11,7 @@ export default function ContactForm() {
     return (
         <div className='contactFormPage'>
             <form onSubmit={handleSubmit} className='contactForm'>
-                <h2 >Contact Chris</h2>
+                <h2 className='global-heading'>Contact Chris</h2>
 
                 <h3 >For sessions, booking, inquiries and lessons please send your message here.</h3>
 

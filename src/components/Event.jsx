@@ -8,17 +8,17 @@ import "./Event.css";
 export default function Event() {
   return (
     <div className="event">
-      <div className="event-info">
-        <div className="event-time">
-          <span>10th of Sep</span>
-          <span> 12.00pm</span>
-        </div>
-        <div className="event-location">
-          <span> La Belle Angele, Edinburgh</span>
-        </div>
+      <div className="event-date">
+        <h2>10</h2>
+        <span>sep</span>
       </div>
-
-      <MdArrowForwardIos className="event-arrow" />
+      <div className="event-info">
+        <h2>Event Title</h2>
+        <span>Edinburgh, La Belle Angele</span>
+      </div>
+      <div className="event-arrow">
+        <MdArrowForwardIos className="event-arrow" />
+      </div>
     </div>
   );
 }

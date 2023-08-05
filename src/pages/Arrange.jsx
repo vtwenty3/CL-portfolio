@@ -12,7 +12,7 @@ export default function Arrange() {
         <img src={ArrangeImg} alt="Arrange" />
       </div>
       <div className="arrange-content">
-        <h2 className="arrange-heading">Arrangement and Orchestration</h2>
+        <h2 className="arrange-heading global-heading">Arrangement and Orchestration</h2>
         <p className="arrange-paragraph">
           Chris offers instrumental tuition to the highest level with
           particular specialism in piano technique, improvisation and practice

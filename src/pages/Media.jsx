@@ -11,7 +11,7 @@ export default function Media() {
     <div className="media">
       <div className="media-content">
         <div className="media-text">
-          <h2 className="media-heading">Performance</h2>
+          <h2 className="media-heading global-heading">Performance</h2>
           <p className="media-paragraph">
             Chris maintains a busy public performance schedule both solo and
             with a number of ensembles. He is regularly engaged as a session
@@ -22,7 +22,6 @@ export default function Media() {
             <TiSocialVimeoCircular />
 
           </div>
-          <Button title="All Events" onClick={() => console.log("bye")} />
 
         </div>
         <div className="media-video">
@@ -38,8 +37,11 @@ export default function Media() {
         </div>
       </div>
       <div className="eventbar">
-        <span className="eventbar-heading"> Next event:</span>
+        <span className="eventbar-heading">Next event:</span>
         <Event />
+        <div className="eventbar-button">
+          <Button title="All Events" onClick={() => console.log("bye")} />
+        </div>
       </div>
     </div>
   );
