@@ -6,6 +6,7 @@ import Arrange from "./pages/Arrange";
 import Events from "./pages/Events";
 import Contacts from "./pages/Contacts";
 import ContactForm from "./pages/ContactForm";
+import { motion } from "framer-motion"
 
 import "./App.css";
 
@@ -15,31 +16,52 @@ function App() {
   return (
     <>
       <div className="app">
-        <section id="home">
+        <motion.section
+          initial={{ opacity: 0, }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2, }}
+          id="home">
           <Landing forwardRef={landingRef} />
-        </section>
-        <div className="nav-wrap">
+        </motion.section>
+        <div
+          className="nav-wrap">
           <Navbar forwardRef={landingRef} />
         </div>
         <div className="filler"></div>
-        <section id="media">
+        <motion.section
+          initial={{ opacity: 0, }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2, }}
+          id="media">
           <Media />
-        </section>
-        <section id="arrange">
+        </motion.section>
+        <motion.section
+          initial={{ opacity: 0, }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2, }}
+          id="arrange">
           <Arrange />
-        </section>
-        <section id="events">
+        </motion.section>
+        <motion.section
+          initial={{ opacity: 0, }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2, }}
+          id="events">
           <Events />
-        </section>
-        <section id="contact">
+        </motion.section>
+        <motion.section
+          initial={{ opacity: 0, }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeInOut", delay: 0.4, }}
+          id="contact">
           <ContactForm />
-        </section>
+        </motion.section>
       </div>
     </>
   );
 }
 
 export default App;
-{/* <section>
+{/* <motion.section>
           <Contacts />
-        </section> */}
+        </motion.section> */}

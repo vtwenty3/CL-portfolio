@@ -2,7 +2,6 @@ import React from "react";
 import { BsYoutube, BsVimeo } from "react-icons/bs";
 import { FaYoutube, FaVimeo } from "react-icons/fa";
 import { TiSocialYoutubeCircular, TiSocialVimeoCircular } from "react-icons/ti";
-
 import "./Media.css";
 import Event from "../components/Event";
 import Button from "../components/Button"
