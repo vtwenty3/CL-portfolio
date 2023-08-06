@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import "./Landing.css";
 import { motion } from "framer-motion"
 
-import ChrisImg from "./../assets/chrisrgb2.png";
+import ChrisImg from "./../assets/chrisrgb2.jpg";
 import Tab from "@mui/base/Tab";
 import TabsList from "@mui/base/TabsList";
 import TabPanel from "@mui/base/TabPanel";
