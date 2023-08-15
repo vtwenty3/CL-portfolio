@@ -6,7 +6,6 @@
   background-color: var(--color-hover);
   gap: 1rem;
   box-shadow: inset 0px 0px 0px 2px black;
-
 }
 
 .event-date {
@@ -24,6 +23,8 @@
 .event-date h2 {
   font-size: calc(var(--fs-heading) * 1.7);
   padding: 0 calc(var(--padding) * 1);
+
+
 }
 
 .event-date span {
@@ -38,11 +39,16 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-evenly;
-  width: max-content;
+  /* width: max-content; */
+
 }
 
 .event-info h2 {
   font-size: calc(var(--fs-heading) * 1.5);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 20ch;
 }
 
 .event-info span {

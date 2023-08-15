@@ -5,7 +5,8 @@ import { TiSocialYoutubeCircular, TiSocialVimeoCircular } from "react-icons/ti";
 import "./Media.css";
 import Event from "../components/Event";
 import Button from "../components/Button"
-export default function Media() {
+export default function Media({ latestEvent }) {
+  console.log(latestEvent)
   const scrollToEvents = () => {
     const eventsElement = document.getElementById('events');
     if (eventsElement) {
@@ -28,25 +29,16 @@ export default function Media() {
           <div className="media-buttons">
             <TiSocialYoutubeCircular />
             <TiSocialVimeoCircular />
-
           </div>
-
         </div>
         <div className="media-video">
-          {/* <iframe
-            className="media-video"
-            src={`https://player.vimeo.com/video/729895495?h=20948347c3&color=ff9933`}
-            frameBorder="0"
-            title="Embedded vimeo"
-          /> */}
-
           <iframe className="media-video" src="https://www.youtube.com/embed/K2kQuDfStzg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           <script src="https://player.vimeo.com/api/player.js"></script>
         </div>
       </div>
       <div className="eventbar">
         <span className="eventbar-heading">Next event:</span>
-        <Event />
+        <Event eventObj={latestEvent} />
         <div className="eventbar-button">
           <Button title="All Events" onClick={scrollToEvents} />
         </div>
