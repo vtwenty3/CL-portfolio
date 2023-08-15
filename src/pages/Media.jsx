@@ -5,8 +5,7 @@ import { TiSocialYoutubeCircular, TiSocialVimeoCircular } from "react-icons/ti";
 import "./Media.css";
 import Event from "../components/Event";
 import Button from "../components/Button"
-export default function Media({ latestEvent }) {
-  console.log(latestEvent)
+export default function Media({ eventsData, loading }) {
   const scrollToEvents = () => {
     const eventsElement = document.getElementById('events');
     if (eventsElement) {
@@ -38,7 +37,9 @@ export default function Media({ latestEvent }) {
       </div>
       <div className="eventbar">
         <span className="eventbar-heading">Next event:</span>
-        <Event eventObj={latestEvent} />
+        {loading ? (<div>Loading</div>) : (
+          <Event eventObj={eventsData[0]} />
+        )}
         <div className="eventbar-button">
           <Button title="All Events" onClick={scrollToEvents} />
         </div>

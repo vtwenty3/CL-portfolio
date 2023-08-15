@@ -12,6 +12,8 @@ import "./App.css";
 
 function App() {
   const landingRef = useRef(null);
+  const [loading, setLoading] = useState(true);
+
   const [eventsData, setEventsData] = useState([]);
 
   function stringToDate(dateString) {
@@ -19,6 +21,7 @@ function App() {
     return new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
   }
   useEffect(() => {
+    setLoading(true);
     fetch("https://opensheet.elk.sh/1Tkixy_-BaH7A5lLPFf5Yff-5Vt5XlSbaMLCAPt4JY_g/1")
       .then((res) => res.json())
       .then((data) => {
@@ -30,11 +33,13 @@ function App() {
           .slice(0, 4);
 
         setEventsData(filteredAndSorted);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+        setLoading(false);
       });
   }, []);
-
-
-
   return (
     <>
       <div className="app">
@@ -55,7 +60,7 @@ function App() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2, }}
           id="media">
-          <Media latestEvent={eventsData[0]} />
+          <Media eventsData={eventsData} loading={loading} />
         </motion.section>
         <motion.section
           initial={{ opacity: 0, }}
@@ -69,7 +74,11 @@ function App() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2, }}
           id="events">
-          <Events eventsData={eventsData} />
+          {loading ? (
+            <div>Loading...</div>
+          ) : (
+            <Events eventsData={eventsData} />
+          )}
         </motion.section>
         <motion.section
           initial={{ opacity: 0, }}
