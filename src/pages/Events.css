@@ -6,7 +6,6 @@
   overflow: hidden;
 }
 
-
 .events-container {
   flex-basis: 50%;
   display: flex;
@@ -14,7 +13,6 @@
   flex-direction: column;
   align-items: center;
 }
-
 
 
 @media only screen and (max-width: 750px) {

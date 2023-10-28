@@ -6,7 +6,7 @@ import Button from "../components/Button"
 export default function ContactForm() {
     const [state, handleSubmit] = useForm('xgejoagn');
     if (state.succeeded) {
-        return <p>Thanks for joining!</p>;
+        alert("Your message has been sent!");
     }
     return (
         <div className='contactFormPage'>

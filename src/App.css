@@ -115,6 +115,11 @@ body {
 }
 
 @media only screen and (max-width: 750px) {
+
+  :root {
+    line-height: 1.3;
+  }
+
   html {
     scroll-snap-type: none;
     scroll-snap-stop: normal;

@@ -3,10 +3,10 @@ import "./Landing.css";
 import { motion } from "framer-motion"
 
 import ChrisImg from "./../assets/chrisrgb2.jpg";
-import Tab from "@mui/base/Tab";
-import TabsList from "@mui/base/TabsList";
-import TabPanel from "@mui/base/TabPanel";
-import Tabs from "@mui/base/Tabs";
+import { Tab } from "@mui/base/Tab";
+import { TabsList } from "@mui/base/TabsList";
+import { TabPanel } from "@mui/base/TabPanel";
+import { Tabs } from "@mui/base/Tabs";
 export default function Landing({ forwardRef }) {
   return (
     <div className="landing" ref={forwardRef}>
